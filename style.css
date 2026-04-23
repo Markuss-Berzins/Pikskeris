@@ -66,3 +66,16 @@ footer {
   font-size: 0.85rem;
   color: #7f88a9;
 }
+footer a {
+  color: #9ab8ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin: 10px 0;
+}
