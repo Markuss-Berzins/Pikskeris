@@ -1,37 +1,34 @@
 /***********************
- * VISI PIEEJAMIE ATTĒLI
- * (paplašini šo sarakstu, kad pievieno jaunus)
+ * VISU ATTĒLU SARAKSTS
  ***********************/
 const ALL_QUESTIONS = [
-  { image: "images/q01.png", phishing: true,  explanation: "Steidzams pieprasījums – klasiska pazīme." },
-  { image: "images/q02.png", phishing: false, explanation: "Parasts informatīvs paziņojums bez draudiem." },
-  { image: "images/q03.png", phishing: true,  explanation: "Saite aicina veikt maksājumu." },
-  { image: "images/q04.png", phishing: false, explanation: "Nav saites, nav steidzamības." },
-  { image: "images/q05.png", phishing: true,  explanation: "Prasa personas datus." },
-  { image: "images/q06.png", phishing: true,  explanation: "Nepazīstams sūtītājs + pielikums." },
-  { image: "images/q07.png", phishing: false, explanation: "Iekšējs darba paziņojums." },
-  { image: "images/q08.png", phishing: true,  explanation: "SMS ar maksājuma pieprasījumu." },
-  { image: "images/q09.png", phishing: false, explanation: "Publisks paziņojums bez darbības." },
-  { image: "images/q10.png", phishing: true,  explanation: "Maldinošs bankas dizains." },
+  { image: "images/q01.png", phishing: true,  explanation: "Steidzams teksts un draudi." },
+  { image: "images/q02.png", phishing: false, explanation: "Parasts informatīvs paziņojums." },
+  { image: "images/q03.png", phishing: true,  explanation: "Prasa ievadīt vai apstiprināt datus." },
+  { image: "images/q04.png", phishing: false, explanation: "Nav saišu vai piespiedu darbību." },
+  { image: "images/q05.png", phishing: true,  explanation: "Aicina veikt maksājumu." },
+  { image: "images/q06.png", phishing: true,  explanation: "Nepazīstams sūtītājs." },
+  { image: "images/q07.png", phishing: false, explanation: "Iekšējs paziņojums bez steigas." },
+  { image: "images/q08.png", phishing: true,  explanation: "SMS ar saiti vai maksājumu." },
+  { image: "images/q09.png", phishing: false, explanation: "Publiska informācija." },
+  { image: "images/q10.png", phishing: true,  explanation: "Viltus dizains un spiediens." },
 
-  /* ← turpini līdz 30+ */
+  /* ↑ pievieno līdz 30+ */
 ];
 
 /***********************
- * IZVĒLAMIES RANDOM 10
+ * RANDOM 10 JAUTĀJUMI
  ***********************/
-function getRandomQuestions(all, count) {
-  const shuffled = [...all].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
+function pickRandom(all, count) {
+  return [...all].sort(() => Math.random() - 0.5).slice(0, count);
 }
 
-const questions = getRandomQuestions(ALL_QUESTIONS, 10);
-
+const questions = pickRandom(ALL_QUESTIONS, 10);
 let current = 0;
 let score = 0;
 
 /***********************
- * PARĀDA JAUTĀJUMU
+ * RĀDA JAUTĀJUMU
  ***********************/
 function showQuestion() {
   const q = questions[current];
@@ -40,24 +37,19 @@ function showQuestion() {
   document.getElementById("counter").innerText =
     `Jautājums ${current + 1} no ${questions.length}`;
 
-  const percent = (current / questions.length) * 100;
-  document.getElementById("progressBar").style.width = percent + "%";
+  document.getElementById("progressBar").style.width =
+    (current / questions.length) * 100 + "%";
 }
 
 /***********************
- * ATBILDES APSTRĀDE
+ * ATBILDE
  ***********************/
 function answer(choice) {
   const q = questions[current];
   const feedback = document.getElementById("feedback");
 
-  const btnPhish = document.getElementById("btnPhish");
-  const btnSafe = document.getElementById("btnSafe");
-  const nextBtn = document.getElementById("nextBtn");
-
-  // bloķē atkārtotu spiešanu
-  btnPhish.disabled = true;
-  btnSafe.disabled = true;
+  document.getElementById("btnPhish").disabled = true;
+  document.getElementById("btnSafe").disabled = true;
 
   if (choice === q.phishing) {
     score++;
@@ -68,29 +60,36 @@ function answer(choice) {
     feedback.style.color = "#ef4444";
   }
 
-  // parāda pogu "Nākamais jautājums"
-  nextBtn.style.display = "inline-block";
+  document.getElementById("nextBtn").style.display = "inline-block";
 }
-``
 
 /***********************
- * REZULTĀTS
+ * NĀKAMAIS JAUTĀJUMS
+ ***********************/
+function nextQuestion() {
+  document.getElementById("btnPhish").disabled = false;
+  document.getElementById("btnSafe").disabled = false;
+  document.getElementById("nextBtn").style.display = "none";
+  document.getElementById("feedback").innerText = "";
+
+  current++;
+
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+/***********************
+ * REZULTĀTS (tikai punkti)
  ***********************/
 function showResult() {
   document.body.innerHTML = `
     <div class="container">
       <h2>Tests pabeigts</h2>
-      <p>
-        Tavs rezultāts:
-        <strong>${score}</strong> no ${questions.length}
-      </p>
-
-      <p>
-        Paldies par dalību! Regulāra šādu piemēru analizēšana
-        palīdz labāk atpazīt pikšķerēšanu ikdienā.
-      </p>
-
-      ../Sākt no jauna</a>
+      <p><strong>${score}</strong> no ${questions.length}</p>
+      <a class="btn" href="../">Atgriezties</a>
     </div>
   `;
 }
