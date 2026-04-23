@@ -3,14 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Pikšķerēšanas tests</title>
-  ../style.css
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-<h2>Pikšķerēšanas tests (demo)</h2>
+<div class="container">
 
-<p>Šeit būs 10 jautājumu spēle.</p>
+  <h2>Pikšķerēšanas tests</h2>
 
-../script.js
+  <div class="progress">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <p id="counter"></p>
+
+  <p id="text"></p>
+
+  <div>
+    <button onclick="answer(true)">🚨 Phishing</button>
+    <button onclick="answer(false)">✅ Nav phishing</button>
+  </div>
+
+  <p id="feedback"></p>
+
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>
