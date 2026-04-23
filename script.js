@@ -51,6 +51,14 @@ function answer(choice) {
   const q = questions[current];
   const feedback = document.getElementById("feedback");
 
+  const btnPhish = document.getElementById("btnPhish");
+  const btnSafe = document.getElementById("btnSafe");
+  const nextBtn = document.getElementById("nextBtn");
+
+  // bloķē atkārtotu spiešanu
+  btnPhish.disabled = true;
+  btnSafe.disabled = true;
+
   if (choice === q.phishing) {
     score++;
     feedback.innerText = "✅ Pareizi. " + q.explanation;
@@ -60,17 +68,10 @@ function answer(choice) {
     feedback.style.color = "#ef4444";
   }
 
-  setTimeout(() => {
-    feedback.innerText = "";
-    current++;
-
-    if (current < questions.length) {
-      showQuestion();
-    } else {
-      showResult();
-    }
-  }, 1800);
+  // parāda pogu "Nākamais jautājums"
+  nextBtn.style.display = "inline-block";
 }
+``
 
 /***********************
  * REZULTĀTS
