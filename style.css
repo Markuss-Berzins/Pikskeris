@@ -101,7 +101,7 @@ footer a:hover {
 
 /* Lieli monitori (27"+, 2K, 4K) */
 .container-test {
-  max-width: 1100px;
+  max-width: 50%;
 }
 
 /* Parastie desktopi / lieli laptopi */
