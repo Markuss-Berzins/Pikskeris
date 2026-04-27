@@ -127,4 +127,34 @@ footer a:hover {
   }
 }
 
+/* Attēla ietvars */
+.image-frame {
+  width: 100%;
+  background: #0b0f1a;
+  border-radius: 16px;
+  overflow: hidden; /* ✅ PAREIZĀ VIETA */
+  margin: 24px 0;
+}
+
+/* Attēls – VIENMĒR IETILPST */
+.question-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Laptop izmērs – lai attēls nekļūst pārāk augsts */
+@media (max-width: 1440px) {
+  .question-image {
+    max-height: 550px;
+  }
+}
+
+/* Telefoni */
+@media (max-width: 768px) {
+  .question-image {
+    max-height: 400px;
+  }
+}
 
