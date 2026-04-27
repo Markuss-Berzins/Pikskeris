@@ -101,20 +101,20 @@ footer a:hover {
 
 /* Lieli monitori (27"+, 2K, 4K) */
 .container-test {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 /* Parastie desktopi / lieli laptopi */
 @media (max-width: 1600px) {
   .container-test {
-    max-width: 60%;
+    max-width: 70%;
   }
 }
 
 /* Laptopi 13–14 collu */
 @media (max-width: 1366px) {
   .container-test {
-    max-width: 70%;
+    max-width: 80%;
     padding: 16px 12px;
   }
 }
