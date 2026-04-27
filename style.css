@@ -99,15 +99,23 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Lieli monitori (27"+) */
+/* Lieli monitori (27"+, 2K, 4K) */
 .container-test {
   max-width: 1100px;
 }
 
-/* Laptopi (13–15 collu ekrāni) */
-@media (max-width: 1440px) {
+/* Parastie desktopi / lieli laptopi */
+@media (max-width: 1600px) {
   .container-test {
-    max-width: 950px;
+    max-width: 900px;
+  }
+}
+
+/* Laptopi 13–14 collu */
+@media (max-width: 1366px) {
+  .container-test {
+    max-width: 780px;
+    padding: 32px 24px;
   }
 }
 
@@ -117,6 +125,8 @@ footer a:hover {
     max-width: 100%;
     padding: 24px 16px;
   }
+}
+
 }
 /* Attēla ietvars */
 .image-frame {
