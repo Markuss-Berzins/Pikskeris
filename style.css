@@ -133,7 +133,7 @@ footer a:hover {
   width: 100%;
   background: #0b0f1a;
   border-radius: 16px;
-  overflow: hidden; /* ✅ PAREIZĀ VIETA */
+  overflow: hidden; 
   margin: 24px 0;
 }
 
