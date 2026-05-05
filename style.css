@@ -48,6 +48,10 @@ button:hover,
   box-shadow: 0 12px 30px rgba(6, 182, 212, 0.5);
 }
 
+.justified {
+  text-align: justify;
+  hyphens: auto;
+}
 
 .progress {
   width: 100%;
