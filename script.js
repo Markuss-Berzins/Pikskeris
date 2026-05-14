@@ -271,7 +271,7 @@ const ALL_QUESTIONS = [
   },
       {
     image: "images/q25.png",
-    phishing: true,
+    phishing: false,
     explanation: [
       "Pareizs domēns: saite ved uz uznemums.lv → sakrīt ar uzņēmuma nosaukumu.",
       "Nav maskēta saite: redzamais teksts un faktiskā URL ir vienādi.",
