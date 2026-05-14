@@ -235,7 +235,7 @@ const ALL_QUESTIONS = [
     explanation: [
       "Sūtītājs neatbilst uzņēmumam: parādās “SIA Uzņēmums”, bet e‑pasts ir …@gmail.com → īsti uzņēmumi izmanto savu domēnu.",
       "Steidzamība: “nepieciešama jūsu darbība”, apmaksas termiņš → rada spiedienu rīkoties ātri.",
-      "Aizdomīga saite: ļoti gara, sarežģīta URL ar daudz nejaušiem vārdiem (secure-login-verification-update-account-hold-confirmation…)",
+      "Aizdomīga saite: ļoti gara, sarežģīta URL ar daudz nejaušiem vārdiem (secure-login-verification-update-account-hold-confirmation…)"
     ]
   },
 
@@ -256,7 +256,7 @@ const ALL_QUESTIONS = [
     phishing: true,
     explanation: [
       "Aizdomīga saite: example.org-ajlsq04zyweb.ovchgcrm.org → īstais domēns ir beigas (ovchgcrm.org), nevis “example.org”.",
-      "Sensitīvs saturs: algas lapiņa → vilina atvērt failu/ievadīt datus.",
+      "Sensitīvs saturs: algas lapiņa → vilina atvērt failu/ievadīt datus."
     ]
   },
       {
@@ -266,7 +266,7 @@ const ALL_QUESTIONS = [
       "Pareizs domēns: saite ved uz siauznemums.lv → sakrīt ar uzņēmuma nosaukumu.",
       "Nav maskēta saite: redzamais teksts un faktiskā URL ir vienādi.",
       "Nav steidzamības/iebiedēšanas: netiek draudēts ar konta bloķēšanu vai termiņiem.",
-      "Loģisks saturs: partneru aptaujas ir bieža un normāla prakse.",
+      "Loģisks saturs: partneru aptaujas ir bieža un normāla prakse."
     ]
   },
       {
@@ -275,7 +275,7 @@ const ALL_QUESTIONS = [
     explanation: [
       "Pareizs domēns: saite ved uz uznemums.lv → sakrīt ar uzņēmuma nosaukumu.",
       "Nav maskēta saite: redzamais teksts un faktiskā URL ir vienādi.",
-      "Nav steidzamības/iebiedēšanas: netiek draudēts ar konta bloķēšanu vai termiņiem.",
+      "Nav steidzamības/iebiedēšanas: netiek draudēts ar konta bloķēšanu vai termiņiem."
     ]
   },
       {
@@ -285,7 +285,7 @@ const ALL_QUESTIONS = [
       "Skenējot QR kodu, nevar redzēt, uz kādu lapu tas ved pirms atvēršanas.",
       " Tas ļauj krāpniekiem paslēpt ļaunprātīgu URL (phishing lapu, ļaunprogrammatūru u.c.).",
       "Apiet drošības pārbaudes: e‑pastā saites bieži tiek filtrētas, bet QR kodi to var apiet.",
-      "Aizdomīgs sūtītāja domēns: micros0ft-support-system.net → “o” aizvietots ar “0” + nav oficiālais Microsoft domēns.",
+      "Aizdomīgs sūtītāja domēns: micros0ft-support-system.net → “o” aizvietots ar “0” + nav oficiālais Microsoft domēns."
     ]
   },
 ];
