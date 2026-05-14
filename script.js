@@ -231,9 +231,11 @@ const ALL_QUESTIONS = [
 
     {
     image: "images/q21.png",
-    phishing: false,
+    phishing: true,
     explanation: [
-      "TEST",
+      "Sūtītājs neatbilst uzņēmumam: parādās “SIA Uzņēmums”, bet e‑pasts ir …@gmail.com → īsti uzņēmumi izmanto savu domēnu.",
+      "Steidzamība: “nepieciešama jūsu darbība”, apmaksas termiņš → rada spiedienu rīkoties ātri.",
+      "Aizdomīga saite: ļoti gara, sarežģīta URL ar daudz nejaušiem vārdiem (secure-login-verification-update-account-hold-confirmation…)",
     ]
   },
 
