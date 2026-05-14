@@ -154,7 +154,138 @@ const ALL_QUESTIONS = [
       "Izmanto saīsinātas saites (piem., bit.ly, short.io, bl.ink).",
       "Mērķis ir izkrāpt bankas piekļuves datus."
     ]
-  }
+  },
+  
+    {
+    image: "images/q14.png",
+    phishing: false,
+    explanation: [
+      "Sūtītāja e-pasts sakrīt ar uzņēmuma nosaukumu.",
+      "Nav nekādas saites.",
+      "Teksts ir informatīvs un mierīgs.",
+      "Nav draudu vai prasību nekavējoties ievadīt datus."
+    ]
+  },
+
+    {
+    image: "images/q15.png",
+    phishing: false,
+    explanation: [
+      "Sūtītāja e-pasts sakrīt ar uzņēmuma nosaukumu.",
+      "Nav nekādas saites.",
+      "Teksts ir informatīvs un mierīgs.",
+      "Nav draudu vai prasību nekavējoties ievadīt datus."
+    ]
+  },
+
+    {
+    image: "images/q16.png",
+    phishing: false,
+    explanation: [
+      "Domēns sakrīt ar sūtītāju.",
+      "Domēns linkā sakrīt ar sūtītāja domēnu",
+      "Parasts informatīvs e-pasts no Google par pieslēgšanos kontam no jaunas ierīces."
+    ]
+  },
+
+    {
+    image: "images/q17.png",
+    phishing: true,
+    explanation: [
+      "Aizdomīga e‑pasta adrese: micr0soft-security-alert.com izmanto “0” burta “o” vietā → tipiska viltošana.",
+      "Steidzamības radīšana: “nekavējoties apstipriniet” – klasika, lai panāktu impulsīvu klikšķi.",
+      "Aizdomīga saite: peles kursors rāda nejaušu, nesaprotamu URL, kas nav Microsoft.",
+      "Neprecīzs sūtītāja nosaukums: “Microsoft drošības brīdinājums”, bet domēns neatbilst (nav microsoft.com)."
+    ]
+  },
+
+    {
+    image: "images/q18.png",
+    phishing: true,
+    explanation: [
+      "Aizdomīga saite: redzams garš, nejaušs URL (example.com-ajsn3j...tvndqkrdi.net) – neizskatās pēc īsta uzņēmuma domēna.",
+      "Steidzamība/spiediens: “lai turpinātu piekļūt kontam” → rada bailes un steigu.",
+      "Nav personalizācijas: nav vārda, konta detaļu u.c.",
+      "Pieprasa sensitīvu informāciju: maksājuma dati caur linku - tipiska krāpšana."
+    ]
+  },
+
+    {
+    image: "images/q19.png",
+    phishing: true,
+    explanation: [
+      "Saīsināta saite (bit.ly): nevar redzēt īsto galamērķi → ļoti bieži izmanto krāpnieki.",
+      "Neklikšķini uz šādām saitēm: bit.ly, tinyurl.com, goo.gl, t.co, ow.ly, is.gd, rebrand.ly u.c. – tās slēpj patieso adresi."
+    ]
+  },
+
+    {
+    image: "images/q20.png",
+    phishing: false,
+    explanation: [
+      "Domēns sakrīt ar sūtītāju.",
+      "Domēns linkā sakrīt ar sūtītāja domēnu",
+      "Parasts informatīvs e-pasts no Google par pieslēgšanos kontam no jaunas ierīces."
+    ]
+  },
+
+    {
+    image: "images/q21.png",
+    phishing: false,
+    explanation: [
+      "TEST",
+    ]
+  },
+
+    {
+    image: "images/q22.png",
+    phishing: true,
+    explanation: [
+      "Aizdomīga poga/saite: kursors rāda pilnīgi citu URL (…validation-v91.billing-system-access-control-z404.site…) → nav Microsoft domēns.",
+      "Viltots domēns e-pasta adresei",
+      "Steidzamība/iebiedēšana: “48 stundu laikā tiks pārtraukti pakalpojumi” → klasiska manipulācija.",
+      "Pieprasa maksājumu caur linku: biežs krāpniecības scenārijs.",
+      "Nesakritības detaļās: vairāki dažādi domēni vienā e‑pastā → sarkanais karogs."
+    ]
+  },
+
+    {
+    image: "images/q23.png",
+    phishing: true,
+    explanation: [
+      "Aizdomīga saite: example.org-ajlsq04zyweb.ovchgcrm.org → īstais domēns ir beigas (ovchgcrm.org), nevis “example.org”.",
+      "Sensitīvs saturs: algas lapiņa → vilina atvērt failu/ievadīt datus.",
+    ]
+  },
+      {
+    image: "images/q24.png",
+    phishing: false,
+    explanation: [
+      "Pareizs domēns: saite ved uz siauznemums.lv → sakrīt ar uzņēmuma nosaukumu.",
+      "Nav maskēta saite: redzamais teksts un faktiskā URL ir vienādi.",
+      "Nav steidzamības/iebiedēšanas: netiek draudēts ar konta bloķēšanu vai termiņiem.",
+      "Loģisks saturs: partneru aptaujas ir bieža un normāla prakse.",
+    ]
+  },
+      {
+    image: "images/q25.png",
+    phishing: true,
+    explanation: [
+      "Pareizs domēns: saite ved uz uznemums.lv → sakrīt ar uzņēmuma nosaukumu.",
+      "Nav maskēta saite: redzamais teksts un faktiskā URL ir vienādi.",
+      "Nav steidzamības/iebiedēšanas: netiek draudēts ar konta bloķēšanu vai termiņiem.",
+    ]
+  },
+      {
+    image: "images/q26.png",
+    phishing: true,
+    explanation: [
+      "Skenējot QR kodu, nevar redzēt, uz kādu lapu tas ved pirms atvēršanas.",
+      " Tas ļauj krāpniekiem paslēpt ļaunprātīgu URL (phishing lapu, ļaunprogrammatūru u.c.).",
+      "Apiet drošības pārbaudes: e‑pastā saites bieži tiek filtrētas, bet QR kodi to var apiet.",
+      "Aizdomīgs sūtītāja domēns: micros0ft-support-system.net → “o” aizvietots ar “0” + nav oficiālais Microsoft domēns.",
+    ]
+  },
 ];
 
 
